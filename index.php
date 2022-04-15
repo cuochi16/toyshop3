@@ -156,7 +156,7 @@
                                             <li>Movie</li>
                                         </ul>
                                         <h5><a href="#"><?php echo "$product_name" ?></a></h5>
-                                        <h5><a href="#"><?php echo "$product_image" ?></a></h5>
+                                        <h5><a href="#"><?php echo "$product_price" ?></a></h5>
                                     </div>
                                 </div>
                             </div>
