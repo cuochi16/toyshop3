@@ -1,7 +1,7 @@
 <?php
     $severname = "3.132.234.157";
-    $username = "huy16";
-    $password = "huy16";
+    $username = "btec";
+    $password = "123@123a";
     $database = "toyshop";
     //Khai báo biến để kết nỗi CSDL
     $connect = new mysqli($severname,$username,$password,$database);
