@@ -190,15 +190,15 @@
 				    </form>
 			 <?php
                                     include ('connect.php');
-                                    if(isset($_POST['delete']))
+                                    if(isset($_GET['product_id']))
                                     {
-										$product_id = $_GET["product_id"];
+					$product_id = $_GET["product_id"];
                                         $sql = "DELETE FROM 'product' WHERE product_id = '$product_id'";
                                         $delete = mysqli_query($connect,$sql);
                                         if($delete){
-											echo "delete Successfully
-											<script>alert('delete successfully');
-											window.open('product.php', '_self');</script>";
+					echo "delete Successfully
+					<script>alert('delete successfully');
+					window.open('product.php', '_self');</script>";
                                         }
                                         else{
                                                 echo "Error!";
