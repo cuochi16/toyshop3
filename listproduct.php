@@ -184,16 +184,14 @@
                             <td><img src="img/<?php echo "$product_image" ?>" alt=""></td>
                             <td><?php echo "$product_des" ?></td>
                             <td>
-				    <form method="post">
-                               <a href="?product_id=<?php echo "$product_id" ?> " type"submit" name="delete" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
+                               <a href="?product_id=<?php echo "$product_id" ?> " type"submit" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
                                <a type"submit" name="delete" class="btn btn-primary delete"><span class="glyphicon glyphicon-edit"> </span> Delete</a>
-				    </form>
 			 <?php
                                     include ('connect.php');
                                     if(isset($_GET['product_id']))
                                     {
 					$product_id = $_GET["product_id"];
-                                        $sql = "DELETE FROM 'product' WHERE 'product_id' = 'product_id'";
+                                        $sql = "DELETE FROM 'product' WHERE 'product_id' = $product_id";
                                         $delete = mysqli_query($connect,$sql);
                                         if($delete){
 					echo "delete Successfully
