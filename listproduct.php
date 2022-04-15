@@ -167,7 +167,7 @@
                 <tbody>
                 <?php
                                     include('connect.php');
-                                    $sql = "SELECT * FROM `product`,'category' where product.category_id = category.category_id";
+                                    $sql = "SELECT * FROM product, category where product.category_id = category.category_id";
                                     $result = mysqli_query($connect, $sql);
                                     while ($row = mysqli_fetch_array($result))
                                     {
@@ -176,8 +176,7 @@
                                         $product_price = $row['product_price'];
                                         $product_image = $row['product_image'];
                                         $product_des = $row['product_des'];
-					    $category_id = $row['category_id'];
-					    $category_name = $row['category_name'];
+					$category_name = $row['category_name'];
                                 ?>
                         <tr>
                             <td><?php echo "$product_id" ?></td>
@@ -186,6 +185,7 @@
                             <td><img src="img/<?php echo "$product_image" ?>" alt=""></td>
                             <td><?php echo "$product_des" ?></td>
 				<td><?php echo "$category_name" ?></td>
+				<?php } ?>
                             <td>
                                <a href="?id=<?php echo "$product_id" ?> " class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
                                <a type"submit" name="delete" class="btn btn-primary delete"><span class="glyphicon glyphicon-edit"> </span> Delete</a>
@@ -208,7 +208,7 @@
                 					?>
 					    </td>
                         </tr>
-                    <?php } ?>
+                    
                 </tbody>
             </table>
 <!-- Footer Section Begin -->
