@@ -185,7 +185,6 @@
                             <td><img src="img/<?php echo "$product_image" ?>" alt=""></td>
                             <td><?php echo "$product_des" ?></td>
 				<td><?php echo "$category_name" ?></td>
-				<?php } ?>
                             <td>
                                <a href="?id=<?php echo "$product_id" ?> " class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
                                <a type"submit" name="delete" class="btn btn-primary delete"><span class="glyphicon glyphicon-edit"> </span> Delete</a>
@@ -209,6 +208,7 @@
 					    </td>
                         </tr>
                     
+				<?php } ?>
                 </tbody>
             </table>
 <!-- Footer Section Begin -->
