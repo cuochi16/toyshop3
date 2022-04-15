@@ -184,9 +184,28 @@
                             <td><img src="img/<?php echo "$product_image" ?>" alt=""></td>
                             <td><?php echo "$product_des" ?></td>
                             <td>
-                               <a href="{{asset('admin/editproduct/'.$value->product_id)}}" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
+				    <form method="post">
+                               <button type"submit" name="delete" class="btn btn-primary edit"><<span class="glyphicon glyphicon-edit"> </span> Edit</button>
                                <a href="{{asset('admin/deleteproduct/'.$value->product_id)}}" onclick="return confirm('Bạn có chắc muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span>Delete</a>
-                            </td>
+				    </form>
+			 <?php
+                                    include ('connect.php');
+                                    if(isset($_POST['delete']))
+                                    {
+										$SongID = $_GET["product_id"];
+                                        $sql = "DELETE FROM 'product' WHERE product_id = 'product_id'";
+                                        $delete = mysqli_query($connect,$sql);
+                                        if($delete){
+											echo "delete Successfully
+											<script>alert('delete successfully');
+											window.open('product.php', '_self');</script>";
+                                        }
+                                        else{
+                                                echo "Error!";
+                                        }
+                                    }
+                					?>
+					    </td>
                         </tr>
                     <?php } ?>
                 </tbody>
