@@ -193,7 +193,7 @@
                                     if(isset($_GET['product_id']))
                                     {
 					$product_id = $_GET["product_id"];
-                                        $sql = "DELETE FROM 'product' WHERE product_id = '$product_id'";
+                                        $sql = "DELETE FROM 'product' WHERE 'product_id' = 'product_id'";
                                         $delete = mysqli_query($connect,$sql);
                                         if($delete){
 					echo "delete Successfully
