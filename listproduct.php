@@ -185,8 +185,8 @@
                             <td><?php echo "$product_des" ?></td>
                             <td>
 				    <form method="post">
-                               <button type"submit" name="delete" class="btn btn-primary edit"><<span class="glyphicon glyphicon-edit"> </span> Edit</button>
-                               <a href="{{asset('admin/deleteproduct/'.$value->product_id)}}" onclick="return confirm('Bạn có chắc muốn xóa?')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"> </span>Delete</a>
+                               <a href="?id=<?php echo "$product_id" ?> " type"submit" name="delete" class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
+                               <a type"submit" name="delete" class="btn btn-primary delete"><span class="glyphicon glyphicon-edit"> </span> Delete</a>
 				    </form>
 			 <?php
                                     include ('connect.php');
