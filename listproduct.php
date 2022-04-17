@@ -179,7 +179,7 @@
                                 ?>
                         <tr>
                             <td><?php echo "$product_id" ?></td>
-                            <td><?php echo "$product_name" ?></td>
+			    <td><a href="product-details.php?product_id=<?php echo "$product_id" ?>"><?php echo "$product_name" ?></a></td>
                             <td><?php echo "$product_price" ?></td>
                             <td><img src="img/<?php echo "$product_image" ?>" alt=""></td>
                             <td><?php echo "$product_des" ?></td>
