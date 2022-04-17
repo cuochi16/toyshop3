@@ -161,7 +161,6 @@
                         <th>Image</th>
                         <th>Description</th>
                         <th>Category</th>
-                        <th>Chỉnh sửa</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -185,27 +184,7 @@
                             <td><img src="img/<?php echo "$product_image" ?>" alt=""></td>
                             <td><?php echo "$product_des" ?></td>
 				<td><?php echo "$category_name" ?></td>
-                            <td>
-                               <a href="?id=<?php echo "$product_id" ?> " class="btn btn-primary edit"><span class="glyphicon glyphicon-edit"> </span> Edit</a>
-                               <a type"submit" name="delete" class="btn btn-primary delete"><span class="glyphicon glyphicon-edit"> </span> Delete</a>
-			 <?php
-                                    include ('connect.php');
-                                    if(isset($_GET['id']))
-                                    {
-					$id = $_GET["id"];
-                                        $sql = "DELETE FROM 'product' WHERE 'product_id' = $id";
-                                        $delete = mysqli_query($connect,$sql);
-                                        if($delete){
-					echo "delete Successfully
-					<script>alert('delete successfully');
-					window.open('product.php', '_self');</script>";
-                                        }
-                                        else{
-                                                echo "Error!";
-                                        }
-                                    }
-                					?>
-					    </td>
+                            
                         </tr>
                     
 				<?php } ?>
